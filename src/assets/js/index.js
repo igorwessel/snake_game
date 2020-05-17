@@ -28,10 +28,22 @@ function movePlayer(x, y) {
 }
 
 const commands = {
-  ArrowUp: () => movePlayer(game.x, game.y - game.speed),
-  ArrowDown: () => movePlayer(game.x, game.y + game.speed),
-  ArrowLeft: () => movePlayer(game.x - game.speed, game.y),
-  ArrowRight: () => movePlayer(game.x + game.speed, game.y),
+  ArrowUp: () => {
+      if(game.y - game.speed < 0) return
+      movePlayer(game.x, game.y - game.speed)
+    },
+  ArrowDown: () => {
+      if(game.y + game.speed > 582) return
+      movePlayer(game.x, game.y + game.speed)
+    },
+  ArrowLeft: () => {
+      if(game.x - game.speed < 0) return
+      movePlayer(game.x - game.speed, game.y)
+    },
+  ArrowRight: () => {
+      if(game.x + game.speed > 782) return
+      movePlayer(game.x + game.speed, game.y)
+    },
 };
 
 drawPlayer();
