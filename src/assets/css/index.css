@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    box-shadow: 0px 0px 10px black;
+    max-width: 1200px;
+    max-height: 600px;
+    margin: 0 auto;
+}
+
+
+.scoreboard {
+    text-align: center;
+    flex: 1;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.players-score {
+    max-height: 500px;
+    text-align: left;
+    overflow-y: auto;
+}
+
+.players-score-item {
+    margin-top: 2px;
+}
